@@ -1,0 +1,202 @@
+*{margin:0; padding:0;}
+.swiper-slide img{width:100%;}
+a{text-decoration:none;
+	color:#141414;}
+ul{list-style:none;}
+body{font-family:'NanumSquare', sans-serif;
+	font-size:18px;
+	line-height:24px;
+	color:#141414;
+    min-width:1350px;}
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+} 
+
+/*header*/
+
+#header{box-shadow: 0px 0px 4px #0000001f; position: relative; z-index: 10; background-color: white;}
+#header_inner{
+    width:1314px;
+	margin:0 auto;
+    position:relative;
+    }
+
+.logo{float:left; padding:30px 56px 0px 0px;}
+
+/*list1*/
+.list1{float: right;
+font-size: 15px;
+padding-top: 20px;
+}
+.list1 li{float: left; padding-left: 3px;}
+
+/*gnb*/
+
+#gnb{float: left; padding-top: 75px; font-size: 20px; font-family: 'NanumSquareBold'}
+#gnb>li {
+    float: left;
+    padding: 0 45px;
+    position: relative;
+    text-align: center;
+}
+#gnb>li>a {
+    padding-bottom: 20px;
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#gnb > li > a::before {
+    transition: all 300ms ease-in-out;
+    content: " ";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: #fed100;
+    transform: scaleX(0);
+    transform-origin: top right;
+}
+#gnb > li:hover > a::before {    
+    transform: scaleX(1);
+    transform-origin: top left;
+}
+
+#gnb>li:hover>a{
+    color:#fed100;
+}
+
+/*sub*/
+.sub>li>a{
+    display: block;
+    background-color:rgb(255, 255, 255);
+    color:#141414;
+    padding:20px 0;
+    font-size:20px;
+    font-weight: normal;
+}
+.sub>li>a:hover{
+    color:#fed100;
+    transition:all 0.5s;
+}
+.sub{
+    position: absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    transform:scaleY(0);
+    transform-origin:top;
+    opacity:0;
+    transition:all 0.5s;
+    z-index: 10;
+}
+#gnb>li:hover>.sub{
+    transform:scaleY(1);
+    opacity:1;
+}
+
+
+/*list2*/
+.list2{position: absolute; right: 0px; top: 75px;}
+.list2 li{float: left; padding-left: 25px;}
+
+
+/*content*/
+#content{background-image: url(../images/Map.jpg); height: 798px; position: relative;}
+
+/*box1*/
+#box1{background-color: white; width: 450px; height: 798px; position : relative; z-index: 8;}
+
+#box1 .spot{position : absolute; top: 31px; right: 155px;}
+#box1 .spot_p{text-align: right; font-size: 15px; text-decoration: underline; padding: 28px 35px 0px 0px;}
+
+#box1 input{width: 321px; height: 44px; background-color: #e8e8e8; color: rgb(31, 31, 31); border: none; border-radius: 10px; font-size: 16px; padding-right: 45px; padding-left: 20px; position : absolute; top: 63px; right: 32px;}
+#box1 .small_finds{position : absolute; top: 75px; right: 46px;}
+
+.box_br{padding-top: 89px; padding-left: 26px;}
+
+#scroll{height: 607px; overflow-x: hidden;}
+.mCSB_scrollTools .mCSB_draggerRail{
+    background-color: #efefef;
+    filter: "alpha(opacity=40)";
+    -ms-filter: "alpha(opacity=40)";
+}
+.mCSB_scrollTools .mCSB_draggerRail {
+    width: 6px;
+    height: 100%;
+    margin: 0 auto;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #ccc;
+    background-color: rgba(204, 204, 204, 1);
+    filter: "alpha(opacity=75)";
+    -ms-filter: "alpha(opacity=75)";
+    width:6px;
+}
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+    background-color: #ccc; background-color: rgba(204,204,204,1);
+    filter: "alpha(opacity=90)"; -ms-filter: "alpha(opacity=90)"; 
+}
+
+
+.box1_min{width: 387px; height: 110px; padding: 36px 27px;}
+.cir{float: left; width: 110px; height: 110px;}
+.store{float: right; position : relative; width: 254px; height: 110px;}
+.store h3{font-size: 24px; padding: 22px 0px 28px 0px;}
+.store h5{font-size: 16px;}
+
+.store .s1 a{font-size: 14px; position : absolute; top: 23px; left: 100px; color: rgb(106 106 106);}
+.store .s2 a{font-size: 14px; position : absolute; top: 49px; left: 1px; color: rgb(106 106 106);}
+.store .s3 a{font-size: 14px; position : absolute; top: 23px; left: 112px; color: rgb(106 106 106);}
+.store .s4 a{font-size: 14px; position : absolute; top: 23px; left: 129px; color: rgb(106 106 106);}
+.store .s5 a{font-size: 14px; position : absolute; top: 23px; left: 130px; color: rgb(106 106 106);}
+.store .s6 a{font-size: 14px; position : absolute; top: 23px; left: 100px; color: rgb(106 106 106);}
+.store .s7 a{font-size: 14px; position : absolute; top: 23px; left: 155px; color: rgb(106 106 106);}
+
+.store .star{position : absolute; top: 23px; right: 9px;}
+
+
+/*box2*/
+#box2{background-color: white; width: 402px; height: 798px;  position: absolute; left: 0px; bottom: 0; box-shadow: 7px 0px 14px #00000026;}
+
+.card4_img_next:after{content:url(../images/Arrow_min2.png);}
+.card4_img_prev:after{content:url(../images/Arrow_min.png);}
+.card4_img_next, .card4_img_prev{width:50px; height:50px;}
+.card4_img_next{right: 0px;}
+.card4_img_prev{left: 0px;}
+
+
+#box2 h2{font-size: 29px; padding: 27px 29px 24px;}
+#box2 h4{position: absolute; left: 149px; top: 231px; font-size: 15px; color: #6a6a6a;}
+.alarm{width: 367px;height: 88px; box-shadow: 0px 0px 7px #0000001f; border-radius: 7px; position: relative; margin: 0px 16px 14px 16px;}
+.alarm p{font-size: 17px; float: left; padding: 20px 0px 0px 47px;}
+.alarm h6{font-size: 10px; float: right; position: absolute; bottom: 5px; right: 18px; color: #747474;}
+.alarm img{position: absolute; top: 32px; left: 16px;}
+
+#box2>p{font-size: 17px; padding: 9px 31px 9px 63px;}
+#box2>.in{font-size: 17px; font-weight: normal; padding: 9px 22px;}
+#box2 hr{margin: 5px 21px;}
+#box2 h5{color: #747474; font-size: 15px; font-weight: normal; padding: 10px 0px 0px 24px; text-decoration: underline;}
+
+.icon1{position: absolute; top: 218px; right: 25px;}
+.icon2{position: absolute; top: 218px; right: 55px;}
+.icon3{position: absolute; bottom: 388px; left: 33px;}
+.icon4{position: absolute; bottom: 348px; left: 35px;}
+.icon5{position: absolute; bottom: 308px; left: 33px;}
+.icon6{position: absolute; bottom: 201px; left: 33px;}
+.icon7{position: absolute; bottom: 242px; left: 33px;}
+
+.bt{position: absolute; top: 340px; left: 402px; z-index: 5;} 
+.sp{position: absolute; top: 277px; right: 385px; display: none;}
+
+#box2.on{left:450px;}
+#box2{transition:all 0.5s}
