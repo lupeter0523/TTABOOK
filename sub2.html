@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="1400">
+    <title>따북따북</title>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet"><!--나눔스퀘어 폰트-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/><!--슬라이드-->
+    
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css"><!--스크롤--> 
+
+    <link rel="stylesheet" href="css/sub2.css"><!--스타일 링크--> 
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    
+<script>
+    $(function () {
+        $(".box1_min").click(function () {
+                $("#box2").addClass("on");
+                $(".sp").fadeIn();   
+        });
+        $(".bt").click(function () {
+            $("#box2").removeClass("on");
+
+        });
+        $(".sp").click(function () {
+                $(".sp").fadeOut();   
+        });
+    });
+</script><!--햄버거소스--> 
+    
+</head>
+<body>
+    <div id="header">
+        <div id="header_inner" class="clearfix">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="로고이미지">
+            </a>
+            <ul class="list1">
+                <li><a href="#">로그인</a></li>
+                <li>｜</li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+            <ul id="gnb">
+                <li><a href="sub1.html">따북따북이란?</a>
+                    <ul class="sub">
+                        <li><a href="sub1.html#business">책방등록</a></li>
+                        <li><a href="sub1.html#business">회원등록</a></li>
+                        <li><a href="sub1.html#business">후원하기</a></li>
+                    </ul>
+                <li><a href="sub2.html">책방찾기</a></li>
+                <li><a href="sub3.html">구매하기</a>
+                    <ul class="sub">
+                        <li><a href="sub3.html#menu">전체</a></li>
+                        <li><a href="sub3.html#menu">신간</a></li>
+                        <li><a href="sub3.html#menu">추천</a></li>
+                        <li><a href="sub3.html#menu">굿즈</a></li>
+                    </ul>
+                <li><a href="sub4.html">새소식</a>
+                    <ul class="sub">
+                        <li><a href="sub4.html#menu">공지사항</a></li>
+                        <li><a href="sub4.html#menu">이벤트</a></li>
+                        <li><a href="sub4.html#menu">행사정보</a></li>
+                    </ul>
+            </ul>
+            <ul class="list2">
+                <li><a href="#"><img src="images/my.jpg" alt="내정보"></a></li>
+                <li><a href="#"><img src="images/shop.jpg" alt="장바구니"></a></li>
+                <li><a href="#"><img src="images/heart.jpg" alt="찜"></a></li>
+            </ul>
+        </div><!--header_inner--> 
+    </div><!--header-->
+    
+    <div id="content">
+    
+        <img class="sp" src="images/spot.png" alt="위치">
+
+        <div id="box1">
+            <img class="spot" src="images/location_small.png">
+            <h4 class="spot_p"><a href="#">내 위치로 검색하기</a></h4>
+            <input type="text" placeholder="상호 또는 주소를 입력하세요.">
+            <a href="#"><img class="small_finds" src="images/small_finds.png"></a>
+
+            <a href="#"><img class="box_br" src="images/box.jpg"></a>
+            
+            <div id="scroll">
+            
+                <div class="box1_min">
+                    <div class="cir">
+                        <a href="#"><img src="images/circle.png" alt="책방1"></a>
+                    </div>
+
+                    <div class="store">
+                        <h3><a href="#">별빛책방</a></h3>
+                        <h5><a href="#">부산광역시 광복동 패션거리 272번길</a></h5>
+                        <h4 class="s1"><a href="#">독립서점</a></h4>
+                        <a href="#"><img class="star" src="images/star.png" alt="북마크"></a>
+                    </div>
+                </div><!--box1_min-->
+
+                <div class="box1_min">
+                    <div class="cir">
+                        <a href="#"><img src="images/circle2.png" alt="책방2"></a>
+                    </div>
+
+                    <div class="store">
+                        <h3><a href="#">WHAT THE BOOK</a></h3>
+                        <h5><a href="#">부산광역시 남구 용당동 31로 245길</a></h5>
+                        <h4 class="s2"><a href="#">독립서점</a></h4>
+                        <a href="#"><img class="star" src="images/star.png" alt="북마크"></a>
+                    </div>
+                </div><!--box1_min-->
+
+                <div class="box1_min">
+                    <div class="cir">
+                        <a href="#"><img src="images/circle3.png" alt="책방3"></a>
+                    </div>
+
+                    <div class="store">
+                        <h3><a href="#">북 앤 토크</a></h3>
+                        <h5><a href="#">부산광역시 수영구 망미동 35-72</a></h5>
+                        <h4 class="s3"><a href="#">독립서점</a></h4>
+                        <a href="#"><img class="star" src="images/star.png" alt="북마크"></a>
+                    </div>
+                </div><!--box1_min-->
+
+                <div class="box1_min">
+                    <div class="cir">
+                        <a href="#"><img src="images/circle4.png" alt="책방4"></a>
+                    </div>
+
+                    <div class="store">
+                        <h3><a href="#">소소한 서점</a></h3>
+                        <h5><a href="#">부산광역시 영도구 남향동 2가 82</a></h5>
+                        <h4 class="s4"><a href="#">동네서점</a></h4>
+                        <a href="#"><img class="star" src="images/star.png" alt="북마크"></a>
+                    </div>
+                </div><!--box1_min-->
+
+                <div class="box1_min">
+                    <div class="cir">
+                        <a href="#"><img src="images/circle5.png" alt="책방5"></a>
+                    </div>
+
+                    <div class="store">
+                        <h3><a href="#">케이의 하루</a></h3>
+                        <h5><a href="#">부산광역시 서원구 154-12</a></h5>
+                        <h4 class="s5"><a href="#">동네서점</a></h4>
+                        <a href="#"><img class="star" src="images/star.png" alt="북마크"></a>
+                    </div>
+                </div><!--box1_min-->
+
+                <div class="box1_min">
+                    <div class="cir">
+                        <a href="#"><img src="images/circle6.png" alt="책방6"></a>
+                    </div>
+
+                    <div class="store">
+                        <h3><a href="#">고래책방</a></h3>
+                        <h5><a href="#">부산광역시 하남구 4가 12번지</a></h5>
+                        <h4 class="s6"><a href="#">동네서점</a></h4>
+                        <a href="#"><img class="star" src="images/star.png" alt="북마크"></a>
+                    </div>
+                </div><!--box1_min-->
+
+                <div class="box1_min">
+                    <div class="cir">
+                        <a href="#"><img src="images/circle7.png" alt="책방7"></a>
+                    </div>
+
+                    <div class="store">
+                        <h3><a href="#">메리 고 라운드</a></h3>
+                        <h5><a href="#">부산광역시 서구 상수동 11 가로수길</a></h5>
+                        <h4 class="s7"><a href="#">독립서점</a></h4>
+                        <a href="#"><img class="star" src="images/star.png" alt="북마크"></a>
+                    </div>
+                </div><!--box1_min-->
+
+            </div><!--scroll-->
+        </div><!--box1-->
+
+        
+
+        <div id="box2">
+            <a href="#"><img class="bt" src="images/box2.png" alt="미니배너"></a>
+            
+            <div class="swiper mb"><!--swiper는 필수 클래스, 그 옆의 클래스는 보조 클래스-->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/find_bn.jpg" alt="배너1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/find_bn2.jpg" alt="배너2">
+                    </div>
+                </div>
+                
+                <div class="swiper-button-prev card4_img_prev"></div>
+                <div class="swiper-button-next card4_img_next"></div>
+            </div>
+
+
+
+            <h2>별빛책방</h2>
+            <h4>독립서점</h4>
+            <div class="alarm">
+                <img src="images/find_bt3.png" alt="알람">
+                <p>매주 토요일 독서모임을 주최하고 있으니<br>많은 참여바랍니다.</p>
+                <h6>2022.05.23</h6>
+            </div>
+
+            <p>010-3512-6267</p>
+            <p>부산광역시 광복동 패션거리 272번길</p>
+            <p>09:00 - 20:00<br>매주 일요일 정기 휴무</p>
+            <p>http://www.starlit.asd24.com</p>
+            <p>무선 인터넷, 남녀 화장실 구분, 10석, 아이 동반 가능 </p>
+            <hr>
+            <h6 class="in">안녕하세요. 별빛책방은 독서모임 장소가 따로 있으며, 인문학 위주의 책들로 구성되어있습니다. 가벼운 커피도 판매중입니다.</h6>
+            <h5>#독서모임 #인문학 #키즈존 #커피</h5>
+            
+            <img class="icon1" src="images/find_bt1.png" alt="아이콘1">
+            <img class="icon2" src="images/find_bt2.png" alt="아이콘2">
+            <img class="icon3" src="images/find_bt4.png" alt="아이콘3">
+            <img class="icon4" src="images/find_bt5.png" alt="아이콘4">
+            <img class="icon5" src="images/find_bt6.png" alt="아이콘5">
+            <img class="icon6" src="images/find_bt7.png" alt="아이콘6">
+            <img class="icon7" src="images/find_bt8.png" alt="아이콘7">
+        </div><!--box2-->
+        
+    </div><!--content-->
+    <!-- Google CDN jQuery with fallback to local -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script>window.jQuery || document.write('<script src="../js/minified/jquery-1.11.0.min.js"><\/script>')</script>
+	
+	<!-- custom scrollbar plugin -->
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	
+	<script>
+		(function($){
+			$(window).on("load",function(){
+				
+				$("#scroll").mCustomScrollbar({
+					theme:"light",
+                    
+				});
+				
+			});
+		})(jQuery);
+	</script>
+
+<script>
+    var swiper = new Swiper(".mb", {
+      navigation: {
+           nextEl: ".swiper-button-next",
+           prevEl: ".swiper-button-prev",
+          },//화살표를 작동하게 하는 옵션.
+    });//지우면 안되요!
+</script>
+</body>
+</html>

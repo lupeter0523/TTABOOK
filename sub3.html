@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="1400">
+    <title>따북따북</title>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet"><!--나눔스퀘어 폰트-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!--메인배너--> 
+    <link rel="stylesheet" href="css/sub3.css"><!--스타일 링크--> 
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/script.js"></script><!--탑버튼-->
+    <!--제이쿼리 라이브러리파일-->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<!--탭 제이쿼리-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			//처음들어갔을때 모습 만들기...
+			$(".tab_content").hide(); //tab_content 부분을 모두 숨김.
+			$("ul.tabs li:first").addClass("active").show(); //첫번째 탭이 active클래스를 붙이고, 보여줌.
+			$(".tab_content:first").show(); //tab_contents중 첫번째꺼를 보여줌
+
+			//On Click Event
+			$("ul.tabs li").click(function() {
+
+				$("ul.tabs li").removeClass("active"); //Remove any "active" class
+				$(this).addClass("active"); //선택한 탭에만 active클래스 붙임
+				$(".tab_content").hide(); //모든 contents들 숨김
+
+				var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+				/*.attr( attributeName ) -> 선택한 요소의 속성의 값을 가져옵니다.
+				.find()는 어떤 요소의 하위 요소 중 특정 요소를 찾을 때 사용합니다.*/
+				$(activeTab).fadeIn(); //Fade in the active ID content(active되어있는 칸의 id 값을 가진 부분이 나타남)
+				return false;
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+    <div id="header">
+        <div id="header_inner" class="clearfix">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="로고이미지">
+            </a>
+            <ul class="list1">
+                <li><a href="#">로그인</a></li>
+                <li>｜</li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+            <ul id="gnb">
+                <li><a href="sub1.html">따북따북이란?</a>
+                    <ul class="sub">
+                        <li><a href="sub1.html#business">책방등록</a></li>
+                        <li><a href="sub1.html#business">회원등록</a></li>
+                        <li><a href="sub1.html#business">후원하기</a></li>
+                    </ul>
+                <li><a href="sub2.html">책방찾기</a></li>
+                <li><a href="sub3.html">구매하기</a>
+                    <ul class="sub">
+                        <li><a href="sub3.html#menu">전체</a></li>
+                        <li><a href="sub3.html#menu">신간</a></li>
+                        <li><a href="sub3.html#menu">추천</a></li>
+                        <li><a href="sub3.html#menu">굿즈</a></li>
+                    </ul>
+                <li><a href="sub4.html">새소식</a>
+                    <ul class="sub">
+                        <li><a href="sub4.html#menu">공지사항</a></li>
+                        <li><a href="sub4.html#menu">이벤트</a></li>
+                        <li><a href="sub4.html#menu">행사정보</a></li>
+                    </ul>
+            </ul>
+            <ul class="list2">
+                <li><a href="#"><img src="images/my.jpg" alt="내정보"></a></li>
+                <li><a href="#"><img src="images/shop.jpg" alt="장바구니"></a></li>
+                <li><a href="#"><img src="images/heart.jpg" alt="찜"></a></li>
+            </ul>
+        </div><!--header_inner--> 
+    </div><!--header-->
+
+    <div id="banner">
+    <div class="swiper mb"><!--swiper는 필수 클래스, 그 옆의 클래스는 보조 클래스-->
+        <div class="swiper-wrapper"><!--swiper-wrapper는 필수 클래스-->
+            <div class="swiper-slide">
+                <!--swiper-slide는 필수 클래스-->
+                <img src="images/sh_bn1.jpg" alt="메인배너1">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/sh_bn2.jpg" alt="메인배너2">
+            </div>
+            <div class="swiper-slide">
+                <img src=images/sh_bn3.jpg alt="메인배너3">
+            </div>
+            <div class="swiper-slide">
+                <img src=images/sh_bn4.jpg alt="메인배너4">
+            </div>
+        </div>
+    </div><!--mb E-->
+    </div>
+
+
+    <div id="top_book" class="clearfix">
+        <ul>
+            <li><a href="#"><img src="images/t_book1.png" alt="추천책1"></a></li>
+            <li class="Between"><a href="#"><img src="images/t_book2.png" alt="추천책2"></a></li>
+            <li><a href="#"><img src="images/t_book3.png" alt="추천책3"></a></li>
+        </ul>
+    </div>
+    
+    <div id="menu">
+        <!--탭 메뉴 영역 -->
+        <ul class="tabs clearfix">
+            <li><a href="#tab1">전체</a></li>
+            <li><a href="#tab2">신간</a></li>
+            <li><a href="#tab3">추천</a></li>
+            <li><a href="#tab4">굿즈</a></li>
+        </ul>
+        
+        <!--검색 -->
+        <input type="text" placeholder="">
+        <img class="small_finds" src="images/small_finds.png">
+        <img class="Category" src="images/Category.png">
+        
+        <ul class="Category_br">
+            <li><a href="#">소설</a></li>
+            <li><a href="#">경영/경제</a></li>
+            <li><a href="#">인문/사회/역사</a></li>
+            <li><a href="#">자기개발</a></li>
+            <li><a href="#">에세이/시</a></li>
+            <li><a href="#">여행</a></li>
+            <li><a href="#">종교</a></li>
+            <li><a href="#">외국어</a></li>
+            <li><a href="#">과학</a></li>
+            <li><a href="#">진로/교육/교재</a></li>
+            <li><a href="#">건강/다이어트</a></li>
+            <li><a href="#">컴퓨터/IT</a></li>
+            <li><a href="#">어린이/청소년</a></li>
+            <li><a href="#">해외도서</a></li>
+            <li><a href="#">잡지</a></li>
+        </ul>
+    
+
+    <!--탭 콘텐츠 영역 -->
+	<div class="tab_container">
+
+	    <div id="tab1" class="tab_content">
+	        <ul class="every_book">
+                <li><a href="#"><img src="images/bo1.jpg" alt="책1"><h3>오늘 밤, 세계에서 이 사랑이<br>사라진다 해도</h3><p>이치조미사키 저 | 권영주 역</p><h3>14,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo9.jpg" alt="책9"><h3>달러구트 꿈 백화점</h3><p>이미예 저</p><h4>13,800원</h4></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo6.jpg" alt="책6"><h3>천 개의 파랑</h3><p>천선란 저</p><h3>14,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo5.jpg" alt="책5"><h3>오즈의 의류수거함</h3><p>유영민 저</p><h3>12,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo4.jpg" alt="책4"><h3>구의 증명</h3><p>처진영 저</p><h3>8,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo3.jpg" alt="책3"><h3>구미호 식당</h3><p>박현숙 글</p><h3>12,500원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+            </ul>
+            <ul class="every_book">
+                <li><a href="#"><img src="images/bo13.jpg" alt="책13"><h3>책들의 부엌</h3><p>김지혜 저</p><h3>14,500원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo14.jpg" alt="책14"><h3>저별은 모두 당신을 위해 <br>빛나고 있다</h3><p>손힘찬 저</p><h4>15,200원</h4></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo15.jpg" alt="책15"><h3>지겨운 공부 왜 해야 해?</h3><p>정재영 글 | 이은지 그림</p><h3>13,800원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo16.jpg" alt="책16"><h3>천룡팔부</h3><p>김용 저 | 이정원 역</p><h3>12,800원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo17.jpg" alt="책17"><h3>럭키 드로우</h3><p>드로우앤드류 저</p><h3>16,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo18.jpg" alt="책18"><h3>내가 같이 뛰어내려 줄게</h3><p>씨씨코 저</p><h3>12,500원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+            </ul>
+            <ul class="every_book">
+                <li><a href="#"><img src="images/bo19.jpg" alt="책19"><h3>금쪽이들의 진짜 마음속</h3><p>오은영 저</p><h3>19,800원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo20.jpg" alt="책20"><h3>수학의 이유</h3><p>이언 스튜어트 저</p><h4>19,800원</h4></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo21.jpg" alt="책21"><h3>최선의 고통</h3><p>폴 블룸 저 | 김태훈 역</p><h3>17,800원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo22.jpg" alt="책22"><h3>천 개의 뇌</h3><p>제프 호킨스 저 | 이충호 역</p><h3>20,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo23.jpg" alt="책23"><h3>읽는 슬픔, 말하는 사랑</h3><p>황인찬 저</p><h3>16,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo24.jpg" alt="책24"><h3>어느 날, 내 죽음에 네가 들어<br>왔다</h3><p>세이카 료겐 저 | 김윤경 역</p><h3>15,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+            </ul>
+            <ul class="every_book">
+                <li><a href="#"><img src="images/bo2.jpg" alt="책2"><h3>당신은 결국 무엇이든 해내<br>는 사람</h3><p>김상현 저</p><h3>15,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo8.jpg" alt="책8"><h3>심리학이 불안에 답하다</h3><p>황양밍, 장린린 저 | 권소현 역 </p><h4>16,800원</h4></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo12.jpg" alt="책12"><h3>8문장으로 끝내는 유럽여행<br>영어회화</h3><p>황의민 저</p><h3>11,800원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo10.jpg" alt="책10"><h3>주식 잘 사고 잘 파는 법</h3><p>김현구 저</p><h3>19,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo7.jpg" alt="책7"><h3>교양이 쌓일만두 하지?</h3><p>팀 교양만두 저</p><h3>17,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo11.jpg" alt="책11"><h3>아무튼, 노래</h3><p>이슬아 저</p><h3>12,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+            </ul>
+
+            <ul class="number">
+                <li><a href="#">&lt;</a></li>
+                <li class="yell"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">&gt;</a></li>
+            </ul>
+	    </div><!--tab1-->
+
+	    <div id="tab2" class="tab_content">
+            <!--Content-->
+            <ul class="every_book">
+                <li><a href="#"><img src="images/bo13.jpg" alt="책13"><h3>책들의 부엌</h3><p>김지혜 저</p><h3>14,500원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo14.jpg" alt="책14"><h3>저별은 모두 당신을 위해 <br>빛나고 있다</h3><p>손힘찬 저</p><h4>15,200원</h4></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo15.jpg" alt="책15"><h3>지겨운 공부 왜 해야 해?</h3><p>정재영 글 | 이은지 그림</p><h3>13,800원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo16.jpg" alt="책16"><h3>천룡팔부</h3><p>김용 저 | 이정원 역</p><h3>12,800원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo17.jpg" alt="책17"><h3>럭키 드로우</h3><p>드로우앤드류 저</p><h3>16,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo18.jpg" alt="책18"><h3>내가 같이 뛰어내려 줄게</h3><p>씨씨코 저</p><h3>12,500원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+            </ul>
+            <ul class="every_book">
+                <li><a href="#"><img src="images/bo2.jpg" alt="책2"><h3>당신은 결국 무엇이든 해내<br>는 사람</h3><p>김상현 저</p><h3>15,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo8.jpg" alt="책8"><h3>심리학이 불안에 답하다</h3><p>황양밍, 장린린 저 | 권소현 역 </p><h4>16,800원</h4></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo12.jpg" alt="책12"><h3>8문장으로 끝내는 유럽여행<br>영어회화</h3><p>황의민 저</p><h3>11,800원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo10.jpg" alt="책10"><h3>주식 잘 사고 잘 파는 법</h3><p>김현구 저</p><h3>19,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo7.jpg" alt="책7"><h3>교양이 쌓일만두 하지?</h3><p>팀 교양만두 저</p><h3>17,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo11.jpg" alt="책11"><h3>아무튼, 노래</h3><p>이슬아 저</p><h3>12,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+            </ul>
+            <ul class="every_book">
+                <li><a href="#"><img src="images/bo13.jpg" alt="책13"><h3>책들의 부엌</h3><p>김지혜 저</p><h3>14,500원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo14.jpg" alt="책14"><h3>저별은 모두 당신을 위해 <br>빛나고 있다</h3><p>손힘찬 저</p><h4>15,200원</h4></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo15.jpg" alt="책15"><h3>지겨운 공부 왜 해야 해?</h3><p>정재영 글 | 이은지 그림</p><h3>13,800원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo16.jpg" alt="책16"><h3>천룡팔부</h3><p>김용 저 | 이정원 역</p><h3>12,800원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo17.jpg" alt="책17"><h3>럭키 드로우</h3><p>드로우앤드류 저</p><h3>16,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo18.jpg" alt="책18"><h3>내가 같이 뛰어내려 줄게</h3><p>씨씨코 저</p><h3>12,500원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+            </ul>
+            <ul class="every_book">
+                <li><a href="#"><img src="images/bo2.jpg" alt="책2"><h3>당신은 결국 무엇이든 해내<br>는 사람</h3><p>김상현 저</p><h3>15,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo8.jpg" alt="책8"><h3>심리학이 불안에 답하다</h3><p>황양밍, 장린린 저 | 권소현 역 </p><h4>16,800원</h4></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo12.jpg" alt="책12"><h3>8문장으로 끝내는 유럽여행<br>영어회화</h3><p>황의민 저</p><h3>11,800원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo10.jpg" alt="책10"><h3>주식 잘 사고 잘 파는 법</h3><p>김현구 저</p><h3>19,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo7.jpg" alt="책7"><h3>교양이 쌓일만두 하지?</h3><p>팀 교양만두 저</p><h3>17,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo11.jpg" alt="책11"><h3>아무튼, 노래</h3><p>이슬아 저</p><h3>12,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+            </ul>
+
+            <ul class="number">
+                <li><a href="#">&lt;</a></li>
+                <li class="yell"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">&gt;</a></li>
+            </ul>
+		</div><!--tab2-->
+		<div id="tab3" class="tab_content">
+			<!--Content-->
+            <ul class="every_book">
+                <li><a href="#"><img src="images/bo1.jpg" alt="책1"><h3>오늘 밤, 세계에서 이 사랑이<br>사라진다 해도</h3><p>이치조미사키 저 | 권영주 역</p><h3>14,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo9.jpg" alt="책9"><h3>달러구트 꿈 백화점</h3><p>이미예 저</p><h4>13,800원</h4></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo6.jpg" alt="책6"><h3>천 개의 파랑</h3><p>천선란 저</p><h3>14,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo5.jpg" alt="책5"><h3>오즈의 의류수거함</h3><p>유영민 저</p><h3>12,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo4.jpg" alt="책4"><h3>구의 증명</h3><p>처진영 저</p><h3>8,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo3.jpg" alt="책3"><h3>구미호 식당</h3><p>박현숙 글</p><h3>12,500원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+            </ul>
+            <ul class="every_book">
+                <li><a href="#"><img src="images/bo19.jpg" alt="책19"><h3>금쪽이들의 진짜 마음속</h3><p>오은영 저</p><h3>19,800원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo20.jpg" alt="책20"><h3>수학의 이유</h3><p>이언 스튜어트 저</p><h4>19,800원</h4></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo21.jpg" alt="책21"><h3>최선의 고통</h3><p>폴 블룸 저 | 김태훈 역</p><h3>17,800원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo22.jpg" alt="책22"><h3>천 개의 뇌</h3><p>제프 호킨스 저 | 이충호 역</p><h3>20,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo23.jpg" alt="책23"><h3>읽는 슬픔, 말하는 사랑</h3><p>황인찬 저</p><h3>16,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo24.jpg" alt="책24"><h3>어느 날, 내 죽음에 네가 들어<br>왔다</h3><p>세이카 료겐 저 | 김윤경 역</p><h3>15,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+            </ul>
+            <ul class="every_book">
+                <li><a href="#"><img src="images/bo1.jpg" alt="책1"><h3>오늘 밤, 세계에서 이 사랑이<br>사라진다 해도</h3><p>이치조미사키 저 | 권영주 역</p><h3>14,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo9.jpg" alt="책9"><h3>달러구트 꿈 백화점</h3><p>이미예 저</p><h4>13,800원</h4></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo6.jpg" alt="책6"><h3>천 개의 파랑</h3><p>천선란 저</p><h3>14,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo5.jpg" alt="책5"><h3>오즈의 의류수거함</h3><p>유영민 저</p><h3>12,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo4.jpg" alt="책4"><h3>구의 증명</h3><p>처진영 저</p><h3>8,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo3.jpg" alt="책3"><h3>구미호 식당</h3><p>박현숙 글</p><h3>12,500원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼">" alt="찜버튼"></li>
+            </ul>
+            <ul class="every_book">
+                <li><a href="#"><img src="images/bo19.jpg" alt="책19"><h3>금쪽이들의 진짜 마음속</h3><p>오은영 저</p><h3>19,800원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo20.jpg" alt="책20"><h3>수학의 이유</h3><p>이언 스튜어트 저</p><h4>19,800원</h4></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo21.jpg" alt="책21"><h3>최선의 고통</h3><p>폴 블룸 저 | 김태훈 역</p><h3>17,800원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo22.jpg" alt="책22"><h3>천 개의 뇌</h3><p>제프 호킨스 저 | 이충호 역</p><h3>20,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo23.jpg" alt="책23"><h3>읽는 슬픔, 말하는 사랑</h3><p>황인찬 저</p><h3>16,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/bo24.jpg" alt="책24"><h3>어느 날, 내 죽음에 네가 들어<br>왔다</h3><p>세이카 료겐 저 | 김윤경 역</p><h3>15,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+            </ul>
+
+            <ul class="number">
+                <li><a href="#">&lt;</a></li>
+                <li class="yell"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">&gt;</a></li>
+            </ul>
+		 </div><!--tab3-->
+		 <div id="tab4" class="tab_content">
+			<!--Content-->
+            <ul class="every_goods clearfix">
+                <li><a href="#"><img src="images/goods1.jpg" alt="굿즈상품1"><h4>일러스트 달력</h4><h3>18,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/goods2.jpg" alt="굿즈상품2"><h4>2022 다이어리</h4><h3>15,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/goods3.jpg" alt="굿즈상품3"><h4>책방 마스킹 테이프</h4><h3>4,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/goods4.jpg" alt="굿즈상품4"><h4>북마크 책갈피 3종</h4><h3>2,500원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+            </ul>
+            <ul class="every_goods clearfix">
+                <li><a href="#"><img src="images/goods5.jpg" alt="굿즈상품5"><h4>따북따북 머그컵</h4><h3>13,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/goods6.jpg" alt="굿즈상품6"><h4>따북따북 핀버튼</h4><h3>3,000원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+                <li><a href="#"><img src="images/goods7.jpg" alt="굿즈상품7"><h4>따북따북 펜슬</h4><h3>1,500원</h3></a><img class="h_empty" src="images/h_empty.png" alt="찜버튼"></li>
+            </ul>
+		 </div><!--tab4-->
+
+	</div><!--tab_container-->
+    </div><!--menu-->
+
+    
+    <!--footer-->
+    <div id="footer">
+        <div id="footer_inner" class="clearfix">
+            <div class="copyright">
+                <a href="#" class="f_logo">
+                    <img src="images/footer_logo.png" alt="풋터로고이미지">
+                </a>
+                <ul class="clearfix">
+                    <li><a href="#">이용약관</a></li>
+                    <li>｜</li>
+                    <li><a href="#">개인정보취급방법</a></li>
+                    <li>｜</li>
+                    <li><a href="#">청소년보호정책</a></li>
+                    <li>｜</li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li>｜</li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+                <p>
+                    (주)따북따북   주소 : 경기도 문평시 32번길 613 경동빌라 2층<br>
+                    대표이사 정민선 | 사업자등록번호 152-32-24626 | 통신판매업 신고번호 : 1244-서울문평-2148호<br>
+                    개인정보관리책임자 안승길 infor@Ttabook.co.kr 마케팅 제휴 문의 : business@ttabook.co.kr 
+                </p>
+                <p>Copyright ⓒ 따북따북. All rights reserved.</p>
+            </div>
+            <div class="sns">
+                <a href="#"><img src="images/f_button.png" alt="페이스북아이콘"></a>
+                <a href="#"><img src="images/I_button.png" alt="인스타아이콘"></a>
+                <a href="#"><img src="images/talk_button.png" alt="카카오아이콘"></a>
+                <a href="#"><img src="images/you_button.png" alt="유튜브아이콘"></a>
+                <a href="#"><img src="images/N_button.png" alt="네이버아이콘"></a>
+            </div>
+    </div>
+
+    <a href="#" class="top"><img src="images/top.png" alt="top버튼"></a>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script><!--제이쿼리 cdn-->
+<script>
+	$(function(){
+    	//이미지 변경 함수 호출
+        $(".h_empty").click(function(){
+            $(this).attr("src", "images/h_fill.png");//변경될 이미지 주소를 넣어주세요
+        });
+    });
+    
+    $(function(){
+        $("#menu>.Category").click(function(){
+        $("#menu>.Category_br").slideToggle();
+        });
+    });//카테고리 버튼
+</script>
+
+<script>
+    var swiper = new Swiper(".mb", {
+      navigation: {
+           nextEl: ".swiper-button-next",
+           prevEl: ".swiper-button-prev",
+          },//화살표를 작동하게 하는 옵션.
+      pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          },//도트부분을 작동하게 하는 옵션.
+          autoplay: {
+                delay: 3000,
+                /*이미지가 자동으로 넘어가는 시간설정. 1000 = 1초*/
+                disableOnInteraction: false,
+            },
+            loop: true,
+            speed:1000,
+
+    });//지우면 안되요!
+</script>
+
+</body>
+</html>
