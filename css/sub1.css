@@ -63,7 +63,7 @@ padding-top: 20px;
     bottom: 0;
     left: 0;
     height: 2px;
-    background: #fed100;
+    background: #ea6e3d;
     transform: scaleX(0);
     transform-origin: top right;
 }
@@ -73,7 +73,7 @@ padding-top: 20px;
 }
 
 #gnb>li:hover>a{
-    color:#fed100;
+    color:#ea6e3d;
 }
 
 /*sub*/
@@ -86,7 +86,7 @@ padding-top: 20px;
     font-weight: normal;
 }
 .sub>li>a:hover{
-    color:#fed100;
+    color:#ea6e3d;
     transition:all 0.5s;
 }
 .sub{
@@ -163,7 +163,7 @@ padding-top: 20px;
 #history .yell{position: absolute; right: 448px; top: 179px; z-index: -5;}
 
 table{margin-left: 63px; margin-top: 20px;}
-th{font-family: 'NEXEN_TIRE_Bold'; font-weight: normal; font-size: 41px; color: #fed100; padding: 0px 81px 156px 0px;}
+th{font-family: 'NEXEN_TIRE_Bold'; font-weight: normal; font-size: 41px; color: #ea6e3d; padding: 0px 81px 156px 0px;}
 td{text-align: left; padding: 0px 95px 102px 0px;}
 td>h6{font-size: 19px; color: rgb(99, 99, 99); font-weight: normal; padding: 14px 0px;}
 td>p{font-size: 23px; padding-bottom: 10px;}
@@ -229,7 +229,7 @@ td>p{font-size: 23px; padding-bottom: 10px;}
 #person .person_inner{width: 1314px; margin: auto; text-align: right;}
 #person h1{font-family: 'NanumSquareBold'; font-weight: normal; font-size: 42px; color: white; padding: 224px 0px 64px 0px; line-height: 121%;}
 #person h5{font-size: 27px;}
-#person a{background-color: #fed100; padding: 19px 47px; border-radius: 47px;}
+#person a{background-color: #ea6e3d; padding: 19px 47px; border-radius: 47px;}
 
 
 /*footer*/

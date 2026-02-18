@@ -57,7 +57,7 @@ padding-top: 20px;
     bottom: 0;
     left: 0;
     height: 2px;
-    background: #fed100;
+    background: #ea6e3d;
     transform: scaleX(0);
     transform-origin: top right;
 }
@@ -67,7 +67,7 @@ padding-top: 20px;
 }
 
 #gnb>li:hover>a{
-    color:#fed100;
+    color:#ea6e3d;
 }
 
 /*sub*/
@@ -80,7 +80,7 @@ padding-top: 20px;
     font-weight: normal;
 }
 .sub>li>a:hover{
-    color:#fed100;
+    color:#ea6e3d;
     transition:all 0.5s;
 }
 .sub{
@@ -123,7 +123,7 @@ padding-top: 20px;
 .swiper-slide-active .p4{animation: fadeUptext 5.0s; position: absolute; right: 20%; top: 51%; color: white; font-size: 47px; text-align: right; line-height: 70px; font-family: 'GyeonggiBatang'; text-shadow: 4px 4px 6px rgba(0,0,0,0.8)}
 
 .mb .swiper-pagination-bullet{
-    background-color:rgb(255, 215, 36);
+    background-color:rgb(234, 110, 61);
 }
 
 .card4_img_next:after{content:url(../images/Arrow2.png);}
@@ -165,11 +165,11 @@ padding-top: 20px;
 #intro {width:1314px;
 	margin:0 auto;}
 
-#intro h1{font-size: 89px; font-family: 'NEXEN_TIRE_Bold'; font-weight: normal;line-height: 100%; padding: 236px 30px 0px 56px; color: #ffd414;}
+#intro h1{font-size: 89px; font-family: 'NEXEN_TIRE_Bold'; font-weight: normal;line-height: 100%; padding: 236px 30px 0px 56px; color: #ea6e3d;}
 
 #intro h4 {font-weight: normal; font-family: 'NanumSquareBold'; font-size: 30px; text-align: right; line-height: 130%; padding: 56px 36px 220px 30px;}
 
-#why h3{font-weight: normal; font-family: 'NanumSquareBold'; font-size: 30px; text-align: center; line-height: 130%; color: white; background-color: #acc9ae; padding: 30px;}
+#why h3{font-weight: normal; font-family: 'NanumSquareBold'; font-size: 30px; text-align: center; line-height: 130%; color: white; background-color: #81b0df; padding: 30px;}
 
 #one{background: url(../images/one.jpg); height: 983px; position: relative;}
 #one h2{font-weight: normal; font-family: 'NanumSquareBold'; font-size: 34px; text-align: right; line-height: 130%; position: absolute; top: 34.5%;; right: 16.6%;}

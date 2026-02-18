@@ -57,7 +57,7 @@ padding-top: 20px;
     bottom: 0;
     left: 0;
     height: 2px;
-    background: #fed100;
+    background: #ea6e3d;
     transform: scaleX(0);
     transform-origin: top right;
 }
@@ -67,7 +67,7 @@ padding-top: 20px;
 }
 
 #gnb>li:hover>a{
-    color:#fed100;
+    color:#ea6e3d;
 }
 
 /*sub*/
@@ -80,7 +80,7 @@ padding-top: 20px;
     font-weight: normal;
 }
 .sub>li>a:hover{
-    color:#fed100;
+    color:#ea6e3d;
     transition:all 0.5s;
 }
 .sub{
@@ -119,7 +119,7 @@ padding-top: 20px;
 #menu{width: 1314px; margin: auto; padding-top: 100px; position: relative;}
 
 .active{
-    background-color: #fed100;
+    background-color: #ea6e3d;
     border-radius: 40px;    
 }
 
@@ -159,7 +159,7 @@ padding-top: 20px;
 
 .number{width:1314px; margin:0 auto; padding: 120px 0px 180px 0px; font-size: 20px; font-family: 'NanumSquareBold'; text-align: center;}
 .number>li{display: inline-block; margin: 0px 10px;}
-.yell{background-color: #fed100; border-radius: 50%; padding: 2px 8px;}
+.yell{background-color: #ea6e3d; border-radius: 50%; padding: 2px 8px;}
 .yell>a{color: white;}
 .number li:nth-child(1){padding: 0px 30px;}
 .number li:nth-child(8){padding: 0px 30px;}

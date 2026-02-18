@@ -58,7 +58,7 @@ padding-top: 20px;
     bottom: 0;
     left: 0;
     height: 2px;
-    background: #fed100;
+    background: #ea6e3d;
     transform: scaleX(0);
     transform-origin: top right;
 }
@@ -68,7 +68,7 @@ padding-top: 20px;
 }
 
 #gnb>li:hover>a{
-    color:#fed100;
+    color:#ea6e3d;
 }
 
 /*sub*/
@@ -81,7 +81,7 @@ padding-top: 20px;
     font-weight: normal;
 }
 .sub>li>a:hover{
-    color:#fed100;
+    color:#ea6e3d;
     transition:all 0.5s;
 }
 .sub{
