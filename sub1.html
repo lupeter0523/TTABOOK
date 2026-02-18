@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="1400">
+    <title>따북따북</title>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet"><!--나눔스퀘어 폰트-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><!--aos CDN-->
+    <link rel="stylesheet" href="css/sub1.css"><!--스타일 링크-->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/script.js"></script><!--탑버튼-->
+    <!--제이쿼리 라이브러리파일-->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<!--탭 제이쿼리-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			//처음들어갔을때 모습 만들기...
+			$(".tab_content").hide(); //tab_content 부분을 모두 숨김.
+			$("ul.tabs li:first").addClass("active").show(); //첫번째 탭이 active클래스를 붙이고, 보여줌.
+			$(".tab_content:first").show(); //tab_contents중 첫번째꺼를 보여줌
+
+			//On Click Event
+			$("ul.tabs li").click(function() {
+
+				$("ul.tabs li").removeClass("active"); //Remove any "active" class
+				$(this).addClass("active"); //선택한 탭에만 active클래스 붙임
+				$(".tab_content").hide(); //모든 contents들 숨김
+
+				var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+				/*.attr( attributeName ) -> 선택한 요소의 속성의 값을 가져옵니다.
+				.find()는 어떤 요소의 하위 요소 중 특정 요소를 찾을 때 사용합니다.*/
+				$(activeTab).fadeIn(); //Fade in the active ID content(active되어있는 칸의 id 값을 가진 부분이 나타남)
+				return false;
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+    <div id="header">
+        <div id="header_inner" class="clearfix">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="로고이미지">
+            </a>
+            <ul class="list1">
+                <li><a href="#">로그인</a></li>
+                <li>｜</li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+            <ul id="gnb">
+                <li><a href="sub1.html">따북따북이란?</a>
+                    <ul class="sub">
+                        <li><a href="sub1.html#business">책방등록</a></li>
+                        <li><a href="sub1.html#business">회원등록</a></li>
+                        <li><a href="sub1.html#business">후원하기</a></li>
+                    </ul>
+                <li><a href="sub2.html">책방찾기</a></li>
+                <li><a href="sub3.html">구매하기</a>
+                    <ul class="sub">
+                        <li><a href="sub3.html#menu">전체</a></li>
+                        <li><a href="sub3.html#menu">신간</a></li>
+                        <li><a href="sub3.html#menu">추천</a></li>
+                        <li><a href="sub3.html#menu">굿즈</a></li>
+                    </ul>
+                <li><a href="sub4.html">새소식</a>
+                    <ul class="sub">
+                        <li><a href="sub4.html#menu">공지사항</a></li>
+                        <li><a href="sub4.html#menu">이벤트</a></li>
+                        <li><a href="sub4.html#menu">행사정보</a></li>
+                    </ul>
+            </ul>
+            <ul class="list2">
+                <li><a href="#"><img src="images/my.jpg" alt="내정보"></a></li>
+                <li><a href="#"><img src="images/shop.jpg" alt="장바구니"></a></li>
+                <li><a href="#"><img src="images/heart.jpg" alt="찜"></a></li>
+            </ul>
+        </div><!--header_inner--> 
+    </div><!--header-->
+
+    <div id="about">
+        <div class="about_inner">
+        <h1 data-aos="fade-down"
+        data-aos-easing="ease-out-back"
+        data-aos-duration="1500"><span style="color: #ed723f;">A</span>bout</h1>
+        <p data-aos="fade-down" data-aos-duration="2000">책은 가까이 둘수록 마음의 지식을 높여주고 감성을 자극합니다. IT 산업이 발전하고 전자책과 대형 서점의 등장으로 동네<br>책방은 점점 입지가 좁아져 사라지고 있습니다.따북따북은 책을 대신 판매해주고 홍보하며 동네 책방 운영 활성화를 통해<br>지역사회의 지식문화 발전에 기여하는 것이 목적입니다.</p>
+        </div>
+    </div>
+
+    <div id="mentality"  class="clearfix">
+        <img data-aos="fade-up"
+        data-aos-easing="ease-out-back"
+        data-aos-duration="1500" class="slo" src="images/in_slo.png" alt="슬로건">
+        <ul>
+            <li data-aos="fade-up"
+            data-aos-easing="ease-out-back"
+            data-aos-duration="800">
+                <img src="images/in_men1.png" alt="감성">
+                <div class="m_box"><!--포지션a-->
+                    <div class="mtext"><!--포지션a-->
+                        <h2>책을 읽는 기쁨이 더해질 수 있도록<br>따북따북이 돕겠습니다.</h2>
+                    </div><!--btext-->
+                </div><!--b_box-->
+            </li>
+
+            <li data-aos="fade-up"
+            data-aos-easing="ease-out-back"
+            data-aos-duration="1400" class="between">
+                <img src="images/in_men2.png" alt="소통">
+                <div class="m_box"><!--포지션a-->
+                    <div class="mtext"><!--포지션a-->
+                        <h2>함께하는 즐거움이 커질 수 있도록<br>소통의 장을 마련하겠습니다.</h2>
+                    </div><!--btext-->
+                </div><!--b_box-->
+            </li>
+
+            <li data-aos="fade-up"
+            data-aos-easing="ease-out-back"
+            data-aos-duration="2200">
+            <img src="images/in_men3.png" alt="편의">
+            <div class="m_box"><!--포지션a-->
+                <div class="mtext"><!--포지션a-->
+                    <h2>당신의 부담이 덜어질 수 있도록<br>고치고 또 노력하겠습니다.</h2>
+                </div><!--btext-->
+            </div><!--b_box-->
+            </li>
+        </ul>
+    </div>
+
+    <div id="brand">
+        <h1 data-aos="fade-up"
+        data-aos-easing="ease-out-back"
+        data-aos-duration="1000">BRAND</h1>
+        <h5 data-aos="fade-up"
+        data-aos-easing="ease-out-back"
+        data-aos-duration="1400">따북따북만의 감성과 이미지</h5>
+        <img class="yell" src="images/in_o.png" alt="노란공">
+        <p data-aos="fade-up" data-aos-duration="2000">차곡차곡이라는 뜻을 가진 따북따북에서 북은 BooK의 동음이의어를 가지며 '책을 많이 보다.', '지식을 차곡차곡 쌓다.'라는 의미로 지어졌습니다. 자음 'ㄸ'와 'ㅂ'을 책 아이콘 형상으로 차곡차곡 쌓는 느낌을 주었고, 다양한 연령대에 다가갈 수 있도록 둥글고 귀엽게 디자인되었습니다.</p>
+        <img data-aos="fade-up" data-aos-duration="2000" src="images/in_brand.png" alt="브랜드 아이덴티티">
+    </div>
+
+    <div id="history">
+        <h1 data-aos="fade-up"
+        data-aos-easing="ease-out-back"
+        data-aos-duration="1000">HISTORY</h1>
+        <h5 data-aos="fade-up"
+        data-aos-easing="ease-out-back"
+        data-aos-duration="1400">따북따북은 한 사람이라도 더 많은 사람이 즐겁게 책을 읽을 수 있도록 노력합니다.</h5>
+        <img class="yell" src="images/in_o.png" alt="노란공">
+
+        <table>
+            <tr>
+                <th data-aos="fade-up"
+                data-aos-easing="ease-out-back"
+                data-aos-duration="1500">2009</th>
+                <td>
+                    <img data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500" src="images/in_yellbox.png" alt="노란 선">
+                    <h6 data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500">2009.10</h6>
+                    <p data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500">'따북따북' 서비스 출시</p>
+                </td>
+                <th data-aos="fade-up"
+                data-aos-easing="ease-out-back"
+                data-aos-duration="1500">2011</th>
+                <td>
+                    <img data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500" src="images/in_yellbox.png" alt="노란 선">
+                    <h6 data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500">2011.03</h6>
+                    <p data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500">따북따북 협업 동네책방 200개 돌파</p>
+                </td>
+            </tr>
+            <tr>
+                <th data-aos="fade-up"
+                data-aos-easing="ease-out-back"
+                data-aos-duration="1500">2014</th>
+                <td>
+                    <img data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500" src="images/in_yellbox.png" alt="노란 선">
+                    <h6 data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500">2014.12</h6>
+                    <p data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500">회원 수 10만명 돌파</p>
+                </td>
+                <th data-aos="fade-up"
+                data-aos-easing="ease-out-back"
+                data-aos-duration="1500">2016</th>
+                <td>
+                    <img data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500" src="images/in_yellbox.png" alt="노란 선">
+                    <h6 data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500">2016.09</h6>
+                    <p data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500">2016 최고의 브랜드 대상</p>
+                </td>
+            </tr>
+            <tr>
+                <th data-aos="fade-up"
+                data-aos-easing="ease-out-back"
+                data-aos-duration="1500">2017</th>
+                <td>
+                    <img data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500" src="images/in_yellbox.png" alt="노란 선">
+                    <h6 data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500">2017.04</h6>
+                    <p data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500">따북따북 굿즈 출시</p>
+                </td>
+                <th data-aos="fade-up"
+                data-aos-easing="ease-out-back"
+                data-aos-duration="1500">2021</th>
+                <td>
+                    <img data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500" src="images/in_yellbox.png" alt="노란 선">
+                    <h6 data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500">2021.02</h6>
+                    <p data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500">따북따북 전자책 출시</p>
+                </td>
+            </tr>
+            <tr>
+                <th data-aos="fade-up"
+                data-aos-easing="ease-out-back"
+                data-aos-duration="1500">2022</th>
+                <td>
+                    <img data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500" src="images/in_yellbox.png" alt="노란 선">
+                    <h6 data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500">2022.07</h6>
+                    <p data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500">따북따북 오디오북 출시</p>
+                    <p data-aos="fade-up"
+                    data-aos-easing="ease-out-back"
+                    data-aos-duration="1500">따북따북 오프라인 굿즈 스토어 개점</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="business">
+        <h1 data-aos="fade-up"
+        data-aos-easing="ease-out-back"
+        data-aos-duration="1000">BUSINESS</h1>
+        <h5 data-aos="fade-up"
+        data-aos-easing="ease-out-back"
+        data-aos-duration="1400">따북따북은 함께할 여러분을 기다리고 있습니다.</h5>
+        <img class="yell" src="images/in_o.png" alt="노란공">
+
+    <div id="menu">
+        <!--탭 메뉴 영역 -->
+        <ul data-aos="fade-up"
+        data-aos-easing="ease-out-back"
+        data-aos-duration="1000" class="tabs clearfix">
+            <li><a href="#tab1">책방등록</a></li>
+            <li><a href="#tab2">회원등록</a></li>
+            <li><a href="#tab3">후원 및 제안</a></li>
+        </ul>
+
+        <!--탭 콘텐츠 영역 -->
+	<div class="tab_container">
+
+	    <div id="tab1" class="tab_content">
+            <!--Content-->
+            <img data-aos="fade-up"
+            data-aos-easing="ease-out-back"
+            data-aos-duration="1000" src="images/in_regi.png" alt="책방등록">
+            <p data-aos="fade-up"
+            data-aos-easing="ease-out-back"
+            data-aos-duration="1000">협력 책방으로 등록 시 적립과 할인 혜택 적용을 해주셔야 합니다.<br>단, 모든 적립과 할인 혜택은 따북따북에서 부담합니다.<br><br>따북따북 책방 등록 시 홈페이지에 정보가 게시되며, 일부 광고 금액과 5% 판매 수익이 부담됩니다.<br>이부분은 계약 시 협의가 가능합니다. 수익금은 따북따북 운영과 개선, 플랫폼 개발에 사용됩니다.</p>
+
+            <a href="#">책방 등록하기</a>
+        </div><!--tab1 -->
+
+        <div id="tab2" class="tab_content">
+            <!--Content-->
+            <img class="i_box" src="images/in_card.png" alt="따북카드">
+            <div class="text1">
+                <h2>따북카드</h2>
+                <h5>Membership card</h5>
+                <p>전국 참여 동네 책방에서 사용할 수 있는 멤버십 체크카드<br>구매 금액의 1~3% 추가 마일리지 적립, 멤버십 쿠폰과 커피할인쿠폰까지!</p>
+                <a href="sub2.html"><img src="images/in_bt.png" alt="버튼"></a>
+            </div>
+            
+            <img class="benefit" src="images/in_benefit.png" alt="혜택">
+            <a href="#">카드 신청하기</a>
+        </div><!--tab2 -->
+
+        <div id="tab3" class="tab_content">
+            <!--Content-->
+            <div class="t_box">
+            <div class="t_box1">
+                <h4>*이름</h4>
+                <input type="text">
+            </div>
+            <div class="t_box2">
+                <h4>*전화번호</h4>
+                <input type="text">
+            </div>
+            <div class="t_box3">
+                <h4>*이메일</h4>
+                <input type="text">
+            </div>
+            <div class="t_box4">
+                <h4>*내용</h4>
+                <input type="text">
+            </div>    
+            </div>
+            <a href="#">제출하기</a>
+        </div><!--tab3 -->
+
+    </div><!--tab_container -->
+    </div><!--menu -->
+    </div><!--business -->
+    <div id="person">
+        <div class="person_inner">
+            <h1 data-aos="fade-left"
+            data-aos-easing="ease-out-back"
+            data-aos-duration="1000">삶의 즐거움과 문화 발전을 위해<br>함께할 당신을 기다립니다.</h1>
+            <h5 data-aos="fade-left" data-aos-duration="2000"><a href="#">채용 바로가기</a></h5>
+        </div>
+    </div>
+
+    <a href="#" class="top"><img src="images/top.png" alt="top버튼"></a>
+
+    <div id="footer">
+        <div id="footer_inner" class="clearfix">
+            <div class="copyright">
+                <a href="#" class="f_logo">
+                    <img src="images/footer_logo.png" alt="풋터로고이미지">
+                </a>
+                <ul class="clearfix">
+                    <li><a href="#">이용약관</a></li>
+                    <li>｜</li>
+                    <li><a href="#">개인정보취급방법</a></li>
+                    <li>｜</li>
+                    <li><a href="#">청소년보호정책</a></li>
+                    <li>｜</li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li>｜</li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+                <p>
+                    (주)따북따북   주소 : 경기도 문평시 32번길 613 경동빌라 2층<br>
+                    대표이사 정민선 | 사업자등록번호 152-32-24626 | 통신판매업 신고번호 : 1244-서울문평-2148호<br>
+                    개인정보관리책임자 안승길 infor@Ttabook.co.kr 마케팅 제휴 문의 : business@ttabook.co.kr 
+                </p>
+                <p>Copyright ⓒ 따북따북. All rights reserved.</p>
+            </div>
+            <div class="sns">
+                <a href="#"><img src="images/f_button.png" alt="페이스북아이콘"></a>
+                <a href="#"><img src="images/I_button.png" alt="인스타아이콘"></a>
+                <a href="#"><img src="images/talk_button.png" alt="카카오아이콘"></a>
+                <a href="#"><img src="images/you_button.png" alt="유튜브아이콘"></a>
+                <a href="#"><img src="images/N_button.png" alt="네이버아이콘"></a>
+            </div>
+    </div>
+    <script>
+        AOS.init();
+    </script>
+    </body>
+    </html>
